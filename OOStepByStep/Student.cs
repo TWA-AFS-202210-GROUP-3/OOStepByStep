@@ -17,11 +17,11 @@ namespace OOStepByStep
         {
             if (Classno == string.Empty)
             {
-                return base.Introduce() + " I am a student.";
+                return base.Introduce() + "I am a student.";
             }
             else
             {
-                return base.Introduce() + " I am a student of " + Classno;
+                return base.Introduce() + "I am a student of " + Classno;
             }
         }
     }

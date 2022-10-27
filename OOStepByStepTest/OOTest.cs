@@ -46,7 +46,18 @@ namespace OOStepByStepTest
             //when
             string message = student.Introduce();
             //then
-            Assert.Equal("My name is Tom. I am 18 years old. I am a student of class 2", message);
+            Assert.Equal("My name is Tom. I am 18 years old.I am a student of class 2", message);
+        }
+
+        [Fact]
+        public void Should_return_message_when_given_teacher_in_calss()
+        {
+            //give
+            Teacher teacher = new Teacher("Sam", 38, "class 5");
+            //when
+            string message = teacher.Introduce();
+            //then
+            Assert.Equal("My name is Sam. I am 38 years old.I am a teacher of class 5", message);
         }
     }
 }

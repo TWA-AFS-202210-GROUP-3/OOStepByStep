@@ -20,7 +20,7 @@ namespace OOStepByStep
             }
             else
             {
-                return base.Introduce() + "I am a teacher." + " I am a teacher of" + Classno;
+                return base.Introduce() + "I am a teacher of " + Classno;
             }
         }
     }
