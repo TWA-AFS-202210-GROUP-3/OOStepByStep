@@ -6,17 +6,15 @@ namespace OOStepByStep
     {
         private string name;
         private int age;
-        private string role;
-        public Person(string name, int age, string role)
+        public Person(string name, int age)
         {
             this.name = name;
             this.age = age;
-            this.role = role;
         }
 
         public string Introduce()
         {
-            return $"My name is {name}. I am {age} years old. I am a {role}.";
+            return $"My name is {name}. I am {age} years old.";
         }
     }
 }
