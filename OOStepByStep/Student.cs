@@ -18,8 +18,8 @@ namespace OOStepByStep
         public string StudentIntroduce()
         {
             return this.classNumber != 0 ?
-                Introduce() + " I am a student." :
-                Introduce() + $" I am a student of class{classNumber}.";
+               Introduce() + $" I am a student of class {classNumber}." :
+               Introduce() + " I am a student.";
         }
     }
 }
