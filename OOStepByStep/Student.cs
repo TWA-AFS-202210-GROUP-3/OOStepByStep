@@ -29,7 +29,7 @@ namespace OOStepByStep
             }
             else
             {
-                return base.Introduce() + $"I am a student of {classno}" + $"Welcome {newstudentname} join {classno} ";
+                return base.Introduce() + $"I am a student of {classno}." + $"Welcome {newstudentname} join {classno}.";
             }
         }
     }
