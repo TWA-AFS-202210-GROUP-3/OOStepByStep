@@ -9,6 +9,19 @@ namespace OOStepByStepTest
     public class IntroductionTest
     {
         [Fact]
+        public void Should_return_self_introduction_when_introduce_given_a_name_age()
+        {
+            // given
+            Person person = new Person("Tom", 21);
+
+            // when
+            string intro = person.Introduce();
+
+            // then
+            Assert.Equal("My name is Tom. I am 21 years old.", intro);
+        }
+
+        [Fact]
         public void Should_return_self_introduction_when_introduce_given_student_name_age()
         {
             // given
