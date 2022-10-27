@@ -28,7 +28,7 @@ namespace OOStepByStepTest
             Student student = new Student("Tom", 21);
 
             // when
-            string intro = student.StudentIntroduce();
+            string intro = student.Introduce();
 
             // then
             Assert.Equal("My name is Tom. I am 21 years old. I am a student.", intro);
@@ -41,7 +41,7 @@ namespace OOStepByStepTest
             Teacher teacher = new Teacher("Amy", 30);
 
             // when
-            string intro = teacher.TeacherIntroduce();
+            string intro = teacher.Introduce();
 
             // then
             Assert.Equal("My name is Amy. I am 30 years old. I am a teacher.", intro);
@@ -54,7 +54,7 @@ namespace OOStepByStepTest
             Student student = new Student("Tom", 21, 2);
 
             // when
-            string intro = student.StudentIntroduce();
+            string intro = student.Introduce();
 
             // then
             Assert.Equal("My name is Tom. I am 21 years old. I am a student of class 2.", intro);
@@ -67,7 +67,7 @@ namespace OOStepByStepTest
             Teacher teacher = new Teacher("Amy", 30, 2);
 
             // when
-            string intro = teacher.TeacherIntroduce();
+            string intro = teacher.Introduce();
 
             // then
             Assert.Equal("My name is Amy. I am 30 years old. I am a teacher of class 2.", intro);

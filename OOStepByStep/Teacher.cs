@@ -14,11 +14,11 @@ namespace OOStepByStep
             this.classNumber = classNumber;
         }
 
-        public string TeacherIntroduce()
+        public override string Introduce()
         {
             return this.classNumber != 0 ?
-                    Introduce() + $" I am a teacher of class {classNumber}." :
-                    Introduce() + " I am a teacher.";
+                    base.Introduce() + $" I am a teacher of class {classNumber}." :
+                    base.Introduce() + " I am a teacher.";
         }
     }
 }
