@@ -9,13 +9,20 @@ namespace OOStepByStep
 {
     public class Student : People
     {
-        public Student(string name, int age) : base(name, age)
+        public Student(string name, int age, string classno) : base(name, age, classno)
         {
         }
 
         public override string Introduce()
         {
-            return base.Introduce() + "I am a student.";
+            if (Classno == string.Empty)
+            {
+                return base.Introduce() + " I am a student.";
+            }
+            else
+            {
+                return base.Introduce() + " I am a student of " + Classno;
+            }
         }
     }
 }
