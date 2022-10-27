@@ -10,17 +10,33 @@ namespace OOStepByStepTest
     public class ConsoleTest
     {
         [Fact]
-        public void Test_Console()
+        public void Should_return_message_when_given_person()
         {
-            // given
-            var fakeOutput = new StringBuilder();
-            Console.SetOut(new StringWriter(fakeOutput));
+            Student student = new Student();
 
-            // when
-            new Class1().Print();
+            string message = student.Message();
 
-            // then
-            Assert.Equal("console\r\n", fakeOutput.ToString());
+            Assert.Equal("My name is Tom. I am 18 years old.", message);
+        }
+
+        [Fact]
+        public void Should_return_message_when_given_student()
+        {
+            Student student = new Student();
+
+            string message = student.Message();
+
+            Assert.Equal("My name is Tom. I am 18 years old. I am a student", message);
+        }
+
+        [Fact]
+        public void Should_return_message_when_given_teacher()
+        {
+            Teacher teacher = new Teacher();
+
+            string message = teacher.Message();
+
+            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher.", message);
         }
     }
 }
