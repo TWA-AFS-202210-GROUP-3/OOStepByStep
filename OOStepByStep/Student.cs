@@ -2,20 +2,29 @@
 
 namespace OOStepByStepTest
 {
-    public class Student
+    public class Student : Person
     {
-        private string name;
-        private string age;
+        private string stuclass;
 
-        public Student(string name, string age)
+        public Student(string name, string age) : base(name, age)
         {
-            this.name = name;
-            this.age = age;
         }
 
-        public string Message()
+        public Student(string name, string age, string stuclass) : base(name, age)
         {
-            return $"My name is {name}. I am {age} years old.";
+            this.stuclass = stuclass;
+        }
+
+        public override string Message()
+        {
+            if (stuclass == null)
+            {
+                return base.Message() + " I am a student.";
+            }
+            else
+            {
+                return base.Message() + " I am a student" + $" of class {stuclass}.";
+            }
         }
     }
 }
