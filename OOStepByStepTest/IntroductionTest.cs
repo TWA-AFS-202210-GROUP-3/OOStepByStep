@@ -46,5 +46,18 @@ namespace OOStepByStepTest
             // then
             Assert.Equal("My name is Amy. I am 30 years old. I am a teacher.", intro);
         }
+
+        [Fact]
+        public void Should_return_self_introduction_when_introduce_given_teacher_name_age_class()
+        {
+            // given
+            Teacher teacher = new Teacher("Amy", 30, 2);
+
+            // when
+            string intro = teacher.TeacherIntroduce();
+
+            // then
+            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher of class 2.", intro);
+        }
     }
 }
