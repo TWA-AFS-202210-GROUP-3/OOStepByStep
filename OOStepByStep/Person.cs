@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OOStepByStepTest
+namespace OOStepByStep
 {
     public class Person
     {
@@ -13,7 +13,7 @@ namespace OOStepByStepTest
             this.age = age;
         }
 
-        public string Speak()
+        public string Introduce()
         {
             return $"My name is {this.name}. I am {this.age} years old.";
         }

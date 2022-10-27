@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOStepByStep;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace OOStepByStepTest
             //given
             Person person = new Person("Tom", 21);
             //when
-            string res = person.Speak();
+            string res = person.Introduce();
             //then
             Assert.Equal("My name is Tom. I am 21 years old.", res);
         }
@@ -26,9 +27,20 @@ namespace OOStepByStepTest
             //given
             Student student = new Student("Tom", 18);
             //when
-            string res = student.Speak();
+            string res = student.Introduce();
             //then
             Assert.Equal("My name is Tom. I am 18 years old. I am a student.", res);
+        }
+
+        [Fact]
+        public void Should_return_name_and_age_and_type_when_given_teacher_with_name_and_age()
+        {
+            //given
+            Teacher teacher = new Teacher("Amy", 30);
+            //when
+            string res = teacher.Introduce();
+            //then
+            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher.", res);
         }
     }
 }
