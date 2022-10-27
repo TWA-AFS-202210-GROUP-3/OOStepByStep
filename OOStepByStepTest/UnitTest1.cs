@@ -57,5 +57,19 @@ namespace OOStepByStepTest
             //then
             Assert.Equal("My name is Tom. I am 21 years old. I am a student of class 2.", message);
         }
+
+        [Fact]
+        public void Should_return_message_when_teacher_belong_to_class_2_introduce_oneself_given_name_Amy_and_age_30()
+        {
+            //given
+            Teacher teacher = new Teacher("Amy", 30);
+            teacher.BelongTo(new Class("class 2"));
+
+            //when
+            var message = teacher.Introduce();
+
+            //then
+            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher of class 2.", message);
+        }
     }
 }
