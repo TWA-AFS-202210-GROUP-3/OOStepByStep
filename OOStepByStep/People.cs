@@ -10,26 +10,13 @@ namespace OOStepByStep
     {
         private string name;
         private int age;
-
         public People(string name, int age)
         {
-            Name = name;
-            Age = age;
+            this.name = name;
+            this.age = age;
         }
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public int Age
-        {
-            get { return age; }
-            set { age = value; }
-        }
-
-        public string Introduce()
+        public virtual string Introduce()
         {
             // return name + ": speed up " + speed.ToString() + " " + "km/h";
             return $"My name is {name}. I am {age} years old.";

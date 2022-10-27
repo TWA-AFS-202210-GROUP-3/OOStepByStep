@@ -15,5 +15,16 @@ namespace OOStepByStepTest
             //then
             Assert.Equal("My name is Tom. I am 21 years old.", message);
         }
+
+        [Fact]
+        public void Should_return_message_when_given_student_information()
+        {
+            //give
+            Student student = new Student("Tom", 18);
+            //when
+            string message = student.Introduce();
+            //then
+            Assert.Equal("My name is Tom. I am 18 years old.I am a student.", message);
+        }
     }
 }
