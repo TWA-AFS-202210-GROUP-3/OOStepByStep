@@ -20,6 +20,11 @@ namespace OOStepByStep
             this.classNo = classNo;
         }
 
+        public int GetClassNo()
+        {
+            return classNo;
+        }
+
         public override string Introduce()
         {
             if (classNo == 0)
@@ -29,6 +34,18 @@ namespace OOStepByStep
             else
             {
                 return base.Introduce() + $" I am a student of class {classNo}.";
+            }
+        }
+
+        public string Welcome(Student newComer)
+        {
+            if (classNo == newComer.GetClassNo())
+            {
+                return base.Introduce() + $" I am a student of class {classNo}. Welcome {newComer.GetName()} join class {classNo}.";
+            }
+            else
+            {
+                return string.Empty;
             }
         }
     }

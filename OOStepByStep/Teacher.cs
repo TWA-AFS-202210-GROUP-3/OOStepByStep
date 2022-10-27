@@ -31,5 +31,17 @@ namespace OOStepByStep
                 return base.Introduce() + $" I am a teacher of class {classNo}.";
             }
         }
+
+        public string Welcome(Student newComer)
+        {
+            if (classNo == newComer.GetClassNo())
+            {
+                return base.Introduce() + $" I am a teacher of class {classNo}. Welcome {newComer.GetName()} join class {classNo}.";
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
     }
 }
