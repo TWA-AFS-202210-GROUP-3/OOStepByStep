@@ -10,7 +10,11 @@ namespace OOStepByStep
     {
         public Teacher(string name, int age) : base(name, age)
         {
+        }
 
+        public override string Introduce()
+        {
+            return base.Introduce() + "I am a teacher.";
         }
     }
 }
