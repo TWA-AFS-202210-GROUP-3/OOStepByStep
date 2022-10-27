@@ -12,11 +12,23 @@
             this.classNo = classNo;
         }
 
+        public int ClassNo
+        {
+            get { return classNo; }
+        }
+
         public string Introduce()
         {
             return this.classNo != 0 ?
                 base.Introduce() + $" I am a teacher of class {this.classNo}." :
                 base.Introduce() + " I am a teacher.";
+        }
+
+        public string WelcomeNewStudent(Student student)
+        {
+            return this.classNo == student.ClassNo ?
+                base.Introduce() + $" I am a teacher of class {this.classNo}. Welcome {student.Name} join class {this.classNo}." :
+                " ";
         }
     }
 }
