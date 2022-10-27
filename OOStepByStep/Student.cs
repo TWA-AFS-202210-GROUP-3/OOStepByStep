@@ -26,5 +26,17 @@ namespace OOStepByStepTest
                 return base.Message() + " I am a student" + $" of class {stuclass}.";
             }
         }
+
+        public override string Welcome(Person person)
+        {
+            if (stuclass == person.Stuclass)
+            {
+                return Message() + base.Welcome(person);
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
     }
 }
