@@ -9,13 +9,15 @@ namespace OOStepByStep
 {
     public class Student : Person
     {
-        public Student(string name, int age) : base(name, age)
+        private int classNo;
+        public Student(string name, int age, int classNo) : base(name, age)
         {
+            this.classNo = classNo;
         }
 
         public override string Introduce()
         {
-            return base.Introduce() + " I am a student.";
+            return base.Introduce() + $" I am a student of class {classNo}.";
         }
     }
 }

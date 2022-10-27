@@ -20,22 +20,22 @@ namespace OOStepByStepTest
         public void Should_return_introduce_message_when_given_a_teacher()
         {
             //given
-            Teacher teacher = new Teacher("Amy", 30);
+            Teacher teacher = new Teacher("Amy", 30, 2);
             //when
             string introduceMessage = teacher.Introduce();
             //then
-            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher.", introduceMessage);
+            Assert.Equal("My name is Amy. I am 30 years old. I am a teacher of class 2.", introduceMessage);
         }
 
         [Fact]
         public void Should_return_introduce_message_when_given_a_student()
         {
             //given
-            Student student = new Student("Tom", 18);
+            Student student = new Student("Tom", 18, 2);
             //when
             string introduceMessage = student.Introduce();
             //then
-            Assert.Equal("My name is Tom. I am 18 years old. I am a student.", introduceMessage);
+            Assert.Equal("My name is Tom. I am 18 years old. I am a student of class 2.", introduceMessage);
         }
     }
 }
