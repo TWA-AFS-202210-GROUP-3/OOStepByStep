@@ -9,28 +9,53 @@ namespace OOStepByStep
 {
     public class Student : People
     {
-        private string classno;
-        private string newstudentname;
-        public Student(string name, int age, string classno, string newstudentname) : base(name, age)
+        private int classno;
+        private string name;
+
+        public Student(string name, int age) : base(name, age)
+        {
+        }
+
+        public Student(string name, int age, int classno) : base(name, age)
         {
             this.classno = classno;
-            this.newstudentname = newstudentname;
+            this.name = name;
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public int Classno
+        {
+            get { return classno; }
+            set { classno = value; }
+        }
+
+        public string WelcomeNewStudent(Student student)
+        {
+            return classno == student.classno ? base.Introduce() + $"I am a student of class {classno}.Welcome {student.name} join class {classno}." : " ";
         }
 
         public override string Introduce()
         {
-            if (classno == string.Empty && newstudentname == string.Empty)
-            {
-                return base.Introduce() + "I am a student.";
-            }
-            else if (classno != string.Empty && newstudentname == string.Empty)
-            {
-                return base.Introduce() + $"I am a student of {classno}";
-            }
-            else
-            {
-                return base.Introduce() + $"I am a student of {classno}." + $"Welcome {newstudentname} join {classno}.";
-            }
+            return classno != 0 ?
+                base.Introduce() + $"I am a student of class {classno}." :
+                base.Introduce() + "I am a student.";
+            //if (classno == string.Empty && newstudentname == string.Empty)
+            //{
+            //    return base.Introduce() + "I am a student.";
+            //}
+            //else if (classno != string.Empty && newstudentname == string.Empty)
+            //{
+            //    return base.Introduce() + $"I am a student of {classno}";
+            //}
+            //else
+            //{
+            //    return base.Introduce() + $"I am a student of {classno}." + $"Welcome {newstudentname} join {classno}.";
+            //}
         }
     }
 }

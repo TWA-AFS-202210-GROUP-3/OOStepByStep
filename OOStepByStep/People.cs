@@ -10,7 +10,6 @@ namespace OOStepByStep
     {
         private string name;
         private int age;
-       // private string classno;
 
         public People(string name, int age)
         {
@@ -27,11 +26,6 @@ namespace OOStepByStep
         {
             get { return age; } set { age = value; }
         }
-
-        //public string Classno
-        //{
-        //    get { return classno; } set { classno = value; }
-        //}
 
         public virtual string Introduce()
         {
